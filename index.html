@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Text Editor</title>
+ 
+  <title>Simple Text Editor</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
+
+  <h2>Text Editor</h2>
+
+  <div id="toolbar">
+    <button onclick="formatText('bold')">Bold</button>
+    <button onclick="formatText('italic')">Italic</button>
+    <button onclick="formatText('underline')">Underline</button>
+    <input type="color" onchange="changeColor(this.value)" />
+    <button onclick="alignText('left')">Left</button>
+    <button onclick="alignText('center')">Center</button>
+    <button onclick="alignText('right')">Right</button>
+    <button onclick="alignText('justify')">Justify</button>
+    <button onclick="undo()">Undo</button>
+    <button onclick="redo()">Redo</button>
+  </div>
+
+  <div id="editor" contenteditable="true"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
